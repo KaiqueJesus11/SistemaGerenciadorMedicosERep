@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Cadastro de medico</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='../_css/estilo.css'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+ <script src="http://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
+  <script src='../_js/comunicacao.js'></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">GlaxoSmithKline</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#textoNavbar"
+          aria-controls="textoNavbar" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="textoNavbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="../index.html">Home <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Medicos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="cadastrar.html">Cadastro</a>
+                <a class="dropdown-item" href="consultar.html">Consultar</a>
+                 <a class="dropdown-item" href="consultarRepresentanteDoMedico.html">Consultar representante do médico</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Representantes
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="../representante/cadastrarRepresentante.html">Cadastro</a>
+                <a class="dropdown-item" href="../representante/consultarRepresentante.html">Consultar</a>
+                 <a class="dropdown-item" href="../representante/consultarMedicosDoRepresentante.html">Consultar medicos dos representantes</a>     
+              </div>
+            </li>
+             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Visitas
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="./medico/cadastrar.html">Cadastro</a>
+            <a class="dropdown-item" href="../visita/consultarVisita.html">Consultar</a>
+          </div>
+        </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../link/Gerador_de_link.html">Gerar link</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            Sistema de gerenciamento de medicos 
+          </span>
+        </div>
+      </nav>
+  <div class="container">
+    <!-- linha dos card -->
+    <div class="row box align-items-center justify-content-center">
+      <!-- Tab cursos conteudo -->
+      <section >
+        <div class="logo">
+          <img src="../_imagens/logo.png">
+          <h1>Cadastrar medico</h1>
+      </div>
+        <hr>
+        <div class="col-12">
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="sobrenome" placeholder="">
+              </div>                          
+             <div class="form-group col-md-2">
+                    <label for="sobrenome">CRM</label>
+                    <input type="text" class="form-control" id="crm" placeholder="">
+                  </div>
+                  <div class="form-group col-md-2">
+                    <label for="estado">Estado</label>
+                        <select class="form-control" id="estado">
+                            <option value="AC">AC</option>
+                            <option value="AL">AL</option>
+                            <option value="AP">AP</option>
+                            <option value="AM">AM</option>
+                            <option value="BA">BA</option>
+                            <option value="CE">CE</option>
+                            <option value="DF">DF</option>
+                            <option value="ES">ES</option>
+                            <option value="GO">GO</option>
+                            <option value="MA">MA</option>
+                            <option value="MT">MT</option>
+                            <option value="MS">MS</option>
+                            <option value="MG">MG</option>
+                            <option value="PA">PA</option>
+                            <option value="PB">PB</option>
+                            <option value="PR">PR</option>
+                            <option value="PE">PE</option>
+                            <option value="PI">PI</option>
+                            <option value="RJ">RJ</option>
+                            <option value="RN">RN</option>
+                            <option value="RS">RS</option>
+                            <option value="RO">RO</option>
+                            <option value="RR">RR</option>
+                            <option value="SC">SC</option>
+                            <option value="SP">SP</option>
+                            <option value="SE">SE</option>
+                            <option value="TO">TO</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="form-row">
+                    <div class="form-group col-md-4">
+                      <label for="telefone">Telefone</label>
+                      <input type="text" class="form-control" id="telefone" placeholder="(99)99999-9999">
+                    </div>
+                    <div class="form-group col">
+                      <label for="email">E-mail</label>
+                      <input type="email" class="form-control" id="email" placeholder="">
+                    </div>                          
+                  </div>
+            <div class="form-group">
+              <label for="endereco">Endereço</label>
+              <input type="text" class="form-control" id="endereco" placeholder="Rua, número, Bairro, Cidade e Estado">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="especialidade">Especialidade</label>
+                    <select class="form-control" id="especialidade">
+                        <option value="Pediatria">Pediatria</option>
+                        <option value="Cardiologia">Cardiologia</option>
+                        <option value="Clínico geral">Clínico geral</option>
+                    </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="cod_representante">Id do representante</label>
+                <input type="text" class="form-control" id="cod_representante" placeholder="">
+              </div> 
+              <div class="form-group col-md-4">
+                  <label for="visitado">O medico já foi visitado?</label>
+                      <select class="form-control" id="visitado">
+                          <option value=1>Sim</option>
+                          <option value=0>Não</option>
+                      </select>
+                </div>
+            </div>
+            <button type="submit" id="cadastrar" class="btn btn-outline-secondary">Cadastrar</button>
+          </form>
+        </div>
+      </section>
+      </div>
+  </div>
+</body>
+
+</html>
